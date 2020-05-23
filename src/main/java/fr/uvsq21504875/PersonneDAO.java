@@ -4,7 +4,7 @@ package fr.uvsq21504875;
 import java.io.*;
 import java.util.ArrayList;
 
-public class PersonneDAO extends DAO<Personne>{
+public class PersonneDAO extends DAO<Personne> {
   /**
    * Sauvegarder l'objet dans un fichier.
    *
@@ -51,7 +51,7 @@ public class PersonneDAO extends DAO<Personne>{
       FileInputStream fis = new FileInputStream(filename);
       ObjectInputStream ois = new ObjectInputStream(fis);
 
-      list = (ArrayList<Personne>)ois.readObject();
+      list = (ArrayList<Personne>) ois.readObject();
       pc.children.addAll(list);
     } catch (Exception e) {
       e.printStackTrace();
